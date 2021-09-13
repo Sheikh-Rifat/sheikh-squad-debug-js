@@ -1,10 +1,15 @@
+// fetching api
 const loadProducts = () => {
   const url = "https://fakestoreapi.com/products";
   fetch(url)
     .then((response) => response.json())
     .then((data) => showProducts(data));
 };
+
+// calling api function
 loadProducts();
+
+
 
 // show all product in UI 
 const showProducts = (products) => {
@@ -29,6 +34,7 @@ const showProducts = (products) => {
   }
 };
 
+
 // adding products to cart
 let count = 0;
 
@@ -47,6 +53,8 @@ const addToCart = (id, price) => {
   document.getElementById("total-Products").innerText = count;
 };
 
+
+// getting input prices of elements 
 const getInputValue = (id) => {
   const element = document.getElementById(id).innerText;
   const converted = parseFloat(element);
@@ -61,10 +69,12 @@ const updatePrice = (id, value) => {
   document.getElementById(id).innerText = total.toFixed(2);
 };
 
+
 // set innerText function
 const setInnerText = (id, value) => {
   document.getElementById(id).innerText = value.toFixed(2);
 };
+
 
 // update delivery charge and total Tax
 const updateTaxAndCharge = () => {
@@ -87,6 +97,7 @@ const updateTaxAndCharge = () => {
     setInnerText("total-tax", priceConverted * 0.4);
   }
 };
+
 
 //grandTotal update function
 const updateTotal = () => {

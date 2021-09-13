@@ -115,11 +115,14 @@ body {
   border-color: #B98EB1 !important;
 }
 
-
-
 /* rating styles */
-
 .rating{
   color: #F7AA35;
   font-weight: bolder;
+}
+
+/* footer style */
+footer p{
+  margin-top: 20px;
+  padding: 15px;
 }
